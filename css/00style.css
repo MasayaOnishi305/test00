@@ -1,0 +1,226 @@
+/*―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― 
+――
+0.全体に適用するCSS
+
+1.header
+
+2.main
+
+3.footer
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+*/
+
+/*―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― 
+――
+  0.全体に適用するCSS
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+*/
+a{
+    text-decoration: none;
+    display: block;
+    color: #333333;
+}
+body{
+    background-color: #F6F6F6;
+}
+li{
+    list-style: none;
+}
+
+/*――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― 
+――
+  1.header
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+*/
+.top_line{
+    border-top:8px solid #6CC6C4;
+}
+.header_area{
+    display: flex;
+    justify-content:space-between;
+    margin: 0px;
+    width: 920px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.left_header{
+    margin-top: 60px;
+}
+/* right_header 
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+*/
+.right_header{
+    margin: 0 0 0 auto;
+}
+.sub_title{
+    font-size: 10px;
+    margin: 15px 0px;
+}
+.number{
+    font-size: 25px;
+    text-align: right;
+    margin: 25px 0px 10px 0px;
+}
+.number h2{
+    font-weight: normal;
+}
+.business_hours{
+    border: 1px solid rgb(214, 214, 214);
+    padding: 10px 20px;
+    font-size: 10px; 
+}
+.business_hours span{
+    color: #C984A1;
+}
+/*――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― 
+――
+  2.main
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+*/
+main{
+    width: 920px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+}
+/* navi 
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+*/
+.navi ul{
+    display: flex;
+    justify-content:space-between;
+}
+.navi li{
+    display: block;
+    background-color: #80D2D0;
+    border: solid 1px #6CC6C4;
+    width: 20%;
+    margin: 0 auto;
+    padding: 17px 0;
+}
+.navi a{
+    color: white;
+    font-weight: bold;
+}
+.navi li :hover{
+    background-color: #6DC6C4;
+}
+.navi_ja{
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.navi_en{
+    display: block;
+    text-align: center;
+    font-size: 10px;
+}
+.main_area{
+    display: flex;
+    justify-content:space-between;
+    margin-top: 20px;
+}
+/* sub_navi 
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+*/
+.sub_navi{
+    width: 255px;
+    height: 230px;
+    border: solid 1px #6CC6C4; 
+    margin: 0px 20px 20px 0px;
+    background-color: white;
+
+}
+.sub_navi_title{
+    background-color: #80D2D0;
+    color: white;
+    padding: 10px;
+}
+.sub_navi ul{
+    padding: 10px 15px;
+    background-color: white;
+}
+.sub_navi li{
+    width: 230px;
+    line-height: 40px;
+    /* font-weight: bold; */
+    border-bottom: solid 1px #6CC6C4; 
+}
+.sub_navi span{
+    color: #6CC6C4;
+}
+.sub_navi li :hover{
+    color: #6CC6C4;
+}
+/* news 
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+*/
+.news_area{
+    margin-top: 5px;
+    background-color: white;
+    padding: 50px 20px;
+    color: #515151;
+}
+.news_title{
+    border-bottom: solid 3px #6CC6C4; 
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.info{
+    display: flex;
+    justify-content:start;
+    padding: 10px 0;
+    font-size: 13px;
+    border-bottom: dotted 1px #515151;
+    margin-bottom: 10px;
+}
+dt{
+    font-weight: bold;
+    width:25%
+}
+dd{
+    width: 72%;
+}
+
+/*――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― 
+――
+  3.footer
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+*/
+footer{
+    width: 920px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+}
+/* footer_navi 
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+*/
+.footer_navi ul{
+    display: flex;
+    justify-content:start;
+    background-color: #80D2D0;
+}
+.footer_navi a{
+    color: white;
+    margin-left: 15px;
+    line-height: 200%;
+}
+.footer_navi li :hover{
+    text-decoration: underline;
+}
+.footer_address{
+    text-align: end;
+    font-size: 13px;
+    line-height: 300%;
+    border-bottom: solid 2px  #6CC6C4;
+}
+.footer_address span{
+    font-weight: bold;
+}
+.copyright{
+    text-align: center;
+    font-size: 12px;
+    line-height: 400%;
+}
