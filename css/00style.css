@@ -32,26 +32,23 @@ li{
   1.header
 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 */
-.top_line{
-    border-top:8px solid #6CC6C4;
-}
+
 .header_area{
     display: flex;
     justify-content:space-between;
-    margin: 0px;
+    margin: 0 auto;
     width: 920px;
-    margin-right: auto;
-    margin-left: auto;
+    border-top:8px solid #6CC6C4;
 }
 .left_header{
     margin-top: 60px;
 }
+.icon:hover{
+    opacity: 0.5;
+}
 /* right_header 
 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 */
-.right_header{
-    margin: 0 0 0 auto;
-}
 .sub_title{
     font-size: 10px;
     margin: 15px 0px;
@@ -71,6 +68,136 @@ li{
 }
 .business_hours span{
     color: #C984A1;
+}
+.menu-btn{
+    display: none;
+}
+.SPnavi{
+    display: none;
+}
+@media screen and (max-width: 1024px){
+    .header_area{
+        width: 100%;
+        box-sizing: border-box;
+        padding-left:  50px;
+    }
+    .left_header{
+        margin-top: 40px;
+    }
+    .right_header{
+        margin-right: 80px;
+    }
+    .number{
+        margin-top: 0px;
+    }
+    .menu-btn{
+        display: block;
+    }
+    .menu-btn:hover{
+        opacity: 0.5;
+    }
+    .SPnavi{
+        display: block;
+    }
+    .navi{
+        display: none;
+    }
+
+      /*----------------------------
+* メニュー開閉ボタン
+*----------------------------*/
+.menu-btn{
+    position: fixed;
+    top: 40px;
+    right: 20px;
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #6CC6C4;
+  }
+  .menu-btn span,
+  .menu-btn span:before,
+  .menu-btn span:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: #6CC6C4;
+    border-radius: 4px;
+    transition: all .5s;
+  }
+  .menu-btn span:before{
+    bottom: 8px;
+  }
+  .menu-btn span:after{
+    top: 8px;
+  }/*----------------------------
+* メニュー本体
+*----------------------------*/
+.SPnavi{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 30%;
+    height: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #555;
+    color: #fff;
+  }
+  .SPnavi li{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff;
+    box-sizing: border-box;
+  }
+  .SPnavi a{
+    color: #fff;
+  }
+  /*----------------------------
+  * アニメーション部分
+  *----------------------------*/
+  
+  アニメーション前のメニューの状態
+  .SPnavi{
+    transform: translateX(100vw);
+    transition: all .3s linear;
+  }
+  アニメーション後のメニューの状態
+  .SPnavi.is-active{
+    transform: translateX(0);
+  }
+  .is-none{
+    display: none;
+  }
+  .is-active{
+    display: flex;
+  }
+  @media screen and (max-width: 640px){
+    .header_area{
+        display: block;
+        padding-left:  0px;
+    }
+    .left_header{
+        width: 230px;
+        margin: 10px auto 0px;
+    }
+    .right_header{
+        width: 230px;
+        margin: 0 auto;
+    }
+  }
 }
 /*――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― 
 ――
@@ -121,6 +248,83 @@ main{
     justify-content:space-between;
     margin-top: 20px;
 }
+@media screen and (max-width: 1024px){
+    main{
+        width: 100%;
+    }
+    .main_area{
+        display:block;
+    }
+    .main_left{
+        display: none;
+    }
+    .top_image {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+}
+/* slide
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+*/
+button{
+	opacity:.6;
+	transition:opacity .2s;
+	border:none;
+	background:none;
+}
+
+button:focus{
+	outline:none;
+}
+
+button:hover{
+	opacity:1;
+}
+
+.top_image{
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+}
+.top_image ul{
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;}
+#prevBtn{
+    position: absolute;
+    top: 225px;
+    left: 20px;
+}
+#prevBtn img{
+    width: 30px;
+    height: 55px;
+}
+#nextBtn{
+    position: absolute;
+    top: 225px;
+    right: 20px;
+}
+#nextBtn img{
+    width: 30px;
+    height: 55px;
+}
+.SP_top_image{
+    display: none;
+}
+@media screen and (max-width: 1024px){
+    .top_image{
+        display: none;
+    }
+    .SP_top_image{
+        display: block;
+    }
+    .SP_top_image img{
+        width: 100%;
+        margin: 0 auto;
+    }
+}
 /* sub_navi 
 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 */
@@ -153,6 +357,7 @@ main{
 .sub_navi li :hover{
     color: #6CC6C4;
 }
+
 /* news 
 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 */
@@ -181,6 +386,41 @@ dt{
 }
 dd{
     width: 72%;
+}
+@media screen and (max-width: 1024px){
+    .info{
+        display: block;
+    }
+    dt{
+        width:50%;
+        margin-bottom: 10px;
+    }
+    dd{
+        width: 100%;
+    }
+}
+/* SP_sub_navi 
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+*/
+.SP_sub_navi{
+    display: none;
+}
+@media screen and (max-width: 1024px){
+    .SP_sub_navi{
+        display: block;
+        width: 80%;
+        box-sizing: border-box;
+        margin: 0 auto 20px;
+        border: solid 1px black;
+    }
+    .SP_sub_navi li{
+        text-align: center;
+        line-height: 30px;
+        border-bottom: solid 1px black;        
+    }
+    .SP_sub_navi li :hover{
+        color: #6CC6C4;
+    }
 }
 
 /*――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― 
@@ -223,4 +463,19 @@ footer{
     text-align: center;
     font-size: 12px;
     line-height: 400%;
+}
+@media screen and (max-width: 1024px){
+    footer{
+        width:100%;
+    }
+    .footer_navi ul{
+        display: block;
+    }
+    .footer_navi a{
+        text-align: center;
+    }
+    .footer_address{
+        text-align: center;
+    }
+    
 }
