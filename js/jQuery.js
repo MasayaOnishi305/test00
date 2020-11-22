@@ -1,6 +1,6 @@
 $(function(){
   $('.menu-btn').on('click', function(){
-    $('.SPnavi').toggleClass('is-active');
+    $('.sp-navi').toggleClass('is-active');
   });
   var dir = -1;
   var interval = 3000;
